@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storyboard"
+    app:startDestination="@id/createacount">
+
+    <fragment
+        android:id="@+id/editInformation"
+        android:name="com.example.yummy.editInformation"
+        android:label="fragment_edit_information"
+        tools:layout="@layout/fragment_edit_information" />
+    <fragment
+        android:id="@+id/manageAcountInformation"
+        android:name="com.example.yummy.manageAcountInformation"
+        android:label="fragment_manage_acount_information"
+        tools:layout="@layout/fragment_manage_acount_information" >
+        <action
+            android:id="@+id/actionSetting"
+            app:destination="@id/editInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.yummy.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_loginAcount"
+            app:destination="@id/loginAcount" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginAcount"
+        android:name="com.example.yummy.loginAcount"
+        android:label="fragment_login_acount"
+        tools:layout="@layout/fragment_login_acount" >
+        <action
+            android:id="@+id/action_loginAcount_to_manageAcountInformation"
+            app:destination="@id/manageAcountInformation" />
+    </fragment>
+    <fragment
+        android:id="@+id/custmerpage"
+        android:name="com.example.yummy.Custmerpage"
+        android:label="fragment_custmerpage"
+        tools:layout="@layout/fragment_custmerpage" />
+    <fragment
+        android:id="@+id/displayList"
+        android:name="com.example.yummy.displayList"
+        android:label="fragment_display_list"
+        tools:layout="@layout/fragment_display_list" >
+        <action
+            android:id="@+id/action_displayList_to_custmerpage"
+            app:destination="@id/custmerpage" />
+    </fragment>
+    <fragment
+        android:id="@+id/createacount"
+        android:name="com.example.yummy.createacount"
+        android:label="fragment_createacount"
+        tools:layout="@layout/fragment_createacount" />
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.yummy.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/addToMenu"
+        android:name="com.example.yummy.AddToMenu"
+        android:label="fragment_add_to_menu"
+        tools:layout="@layout/fragment_add_to_menu" />
+</navigation>
